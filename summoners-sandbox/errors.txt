@@ -2,8 +2,8 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 15: expected menuitem
-    jump end_menu
-    ^
+File "game/script.rpy", line 23: expected statement.
+    "memes"S
+            ^
 
 Ren'Py Version: Ren'Py 6.99.8.959

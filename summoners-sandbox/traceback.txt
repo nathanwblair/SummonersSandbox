@@ -1,34 +1,20 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/script.rpy", line 7, in script
-    line e "These quotes will show up, and don't need to be backslashed."
-  File "game/01_init.rpy", line 55, in parse_smartline
-    if to_expression(expression) in what:
-  File "game/01_init.rpy", line 46, in to_expression
-    return '*' + sound + '*'
-NameError: global name 'sound' is not defined
+  File "renpy/common/00start.rpy", line 85, in script
+    return
+Exception: Could not find return label (u'C:\\Users\\GGJAM2016\\Documents\\Git\\SummonersSandbox\\SummonersSandbox\\summoners-sandbox/game/script.rpy', 1454116746, 1).
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/script.rpy", line 7, in script
-    line e "These quotes will show up, and don't need to be backslashed."
-  File "C:\Users\GGJAM2016\Downloads\renpy-6.99.8-sdk\renpy\ast.py", line 1693, in execute
-    next_node(self.get_next())
-  File "C:\Users\GGJAM2016\Downloads\renpy-6.99.8-sdk\renpy\ast.py", line 1725, in get_next
-    rv = self.call("next")
-  File "C:\Users\GGJAM2016\Downloads\renpy-6.99.8-sdk\renpy\ast.py", line 1711, in call
-    parsed = renpy.statements.parse(self, self.line, self.block)
-  File "C:\Users\GGJAM2016\Downloads\renpy-6.99.8-sdk\renpy\statements.py", line 131, in parse
-    return pf(l)
-  File "C:\Users\GGJAM2016\Downloads\renpy-6.99.8-sdk\renpy\statements.py", line 113, in parse_data
-    return (name, registry[name]["parse"](l))
-  File "game/01_init.rpy", line 55, in parse_smartline
-    if to_expression(expression) in what:
-  File "game/01_init.rpy", line 46, in to_expression
-    return '*' + sound + '*'
-NameError: global name 'sound' is not defined
+  File "renpy/common/00start.rpy", line 85, in script
+    return
+  File "C:\Users\GGJAM2016\Downloads\renpy-6.99.8-sdk\renpy\ast.py", line 1367, in execute
+    next_node(renpy.game.context().lookup_return(pop=True))
+  File "C:\Users\GGJAM2016\Downloads\renpy-6.99.8-sdk\renpy\execution.py", line 503, in lookup_return
+    raise Exception("Could not find return label {!r}.".format(self.return_stack[-1]))
+Exception: Could not find return label (u'C:\\Users\\GGJAM2016\\Documents\\Git\\SummonersSandbox\\SummonersSandbox\\summoners-sandbox/game/script.rpy', 1454116746, 1).
 
 Windows-7-6.1.7601-SP1
 Ren'Py 6.99.8.959
